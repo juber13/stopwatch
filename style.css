@@ -1,0 +1,75 @@
+html , body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    /* background: #000; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.container{
+    padding: 2rem;
+}
+
+.clock-content , .btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 6rem;
+    margin-top: 20px;
+}
+
+.clock-content div{
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    text-align: center;
+}
+
+
+button{
+    margin-top: 10px;
+    padding: 0.8rem 5.2rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    /* box-shadow:  */
+    box-shadow: rgb(38, 57, 77) 0px 10px 10px -10px;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+button::after{
+    position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgb(247, 187, 187);
+  transition: all 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  z-index: -1;
+}
+
+button:hover{
+    box-shadow: none;
+}
+
+ button:hover:after{
+     width: 100%;
+     /* height; */
+} 
+
+button:disabled{
+    cursor: no-drop;
+}
+
